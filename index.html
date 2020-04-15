@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoolzApp</title>
+    <link rel="icon" href="img/whatsapp.png"/>
+    <script src="https://kit.fontawesome.com/d99074f875.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="page">
+      <div class="container">
+
+        <!-- sezione profilo, tutte le chat, ricerca.... -->
+        <section class="sinistra">
+
+          <!-- img utente, mex di notifica, ricerca chat-->
+          <header class="header-sin">
+            <div class="profilo">
+              <div class="profilo-utente">
+                <img src="img/buffon.jpg" alt="img utente">
+              </div>
+
+              <div class="icone">
+                <i class="fas fa-circle-notch"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
+            </div>
+
+            <div class="notifica">
+              <div class="icona-campana">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+
+              <div class="messaggio-notifica">
+                <p>Ricevi notifiche di nuovi messaggi</p>
+                <a href="#">Attiva notifiche desktop</a>
+              </div>
+            </div>
+
+            <div class="search">
+              <div class="icona">
+                <i class="fas fa-search"></i>
+              </div>
+
+              <div class="ricerca">
+                <input class="cerca-contatti" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+              </div>
+            </div>
+          </header>
+
+          <!-- raccolta tutte le chat -->
+          <main class="main-sin">
+            <div class="chat attivo" data-chatamico="1">
+              <div class="chat-img">
+                <img src="img/chiellini.jpg" alt="Chiellini">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Giorgio Chiellini</h3>
+                  <p>Sono sempre io il capitano</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="2">
+              <div class="chat-img">
+                <img src="img/barzagli.jpg" alt="Barzagli">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Andrea Barzagli</h3>
+                  <p>Vorrei ritornare a giocare</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="3">
+              <div class="chat-img">
+                <img src="img/nedved.jpg" alt="Nedved">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Pavel Nedvěd</h3>
+                  <p>Juve? Eterno amore</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="4">
+              <div class="chat-img">
+                <img src="img/delpiero.jpg" alt="Del Piero">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Alex Del Piero</h3>
+                  <p>Gigi ritirati ahahahahah</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="5">
+              <div class="chat-img">
+                <img src="img/higuain.jpg" alt="Higuaín">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Gonzalo Higuaín</h3>
+                  <p>Sono ingrassato di nuovo</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="6">
+              <div class="chat-img">
+                <img src="img/cr7.jpg" alt="Ronaldo">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Cristiano Ronaldo</h3>
+                  <p>Vado a giocare con l'Inter</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="7">
+              <div class="chat-img">
+                <img src="img/bonucci.jpg" alt="Bonucci">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Leonardo Bonucci</h3>
+                  <p>Sciacquatevi la bocca</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat" data-chatamico="8">
+              <div class="chat-img">
+                <img src="img/dybala.jpg" alt="Dybala">
+              </div>
+
+              <div class="chat-dati">
+                <div class="chat-nome">
+                  <h3>Paulo Dybala</h3>
+                  <p>Hai visto che goal?</p>
+                </div>
+
+                <div class="chat-ora">
+                  <span>19:37</span>
+                </div>
+              </div>
+            </div>
+          </main>
+        </section>
+
+        <!-- sezione chat e scrittura mex -->
+        <section class="destra">
+          <!-- header info chat corrente-->
+          <header class="header-des">
+            <div class="header-des-dati">
+              <div class="header-des-img">
+                <img src="img/chiellini.jpg" alt="Chiellini">
+              </div>
+
+              <div class="header-des-nome">
+                <h3>Giorgio Chiellini</h3>
+                <p>Ultimo accesso oggi alle 18.40</p>
+              </div>
+            </div>
+
+            <div class="header-des-icone">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </header>
+
+          <!-- main chat corrente-->
+          <main class="main-des">
+
+            <div class="chat-des active" data-conversazione="1">
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">Ormai non sei più il capitano...</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Sono sempre io il capitano</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="2">
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Vorrei ritornare a giocare</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">Ci manchi</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="3">
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">Se ti dico Juve</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Juve? Eterno amore</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="4">
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Gigi ritirati ahahahahah</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">MAIIIIII</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="5">
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">Pipita come stai?</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Sono ingrassato di nuovo</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="6">
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Vado a giocare con l'Inter</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">E io ti rompo il crociato</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="7">
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">Che significa la tua esultanza?</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Sciacquatevi la bocca</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-des" data-conversazione="8">
+              <div class="mex ricevuti clearfix">
+                <p class="mex-testo">Hai visto che goal?</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">06:30</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mex inviati clearfix">
+                <p class="mex-testo">Da brividi</p>
+                <i class="fa fa-chevron-down"></i>
+                <span class="mex-ora">20:59</span>
+                <div class="infomsg">
+                  <ul>
+                    <li>Info messaggio</li>
+                    <li class="delete">Cancella messaggio</li>
+                    <li class="exit">Exit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <!-- footer scrittura mex-->
+          <footer class="footer-des">
+            <i class="far fa-smile"></i>
+
+            <div class="footer-write">
+              <input class="write-mex" type="text" name="" value="" placeholder="Scrivi un messaggio">
+            </div>
+
+            <div class="footer-mexsend">
+              <i class="fas fa-microphone"></i>
+              <i class="fab fa-telegram-plane"></i>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="main.js"> </script>
+  </body>
+</html>
