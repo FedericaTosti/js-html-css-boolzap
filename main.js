@@ -16,6 +16,12 @@
 // •	cambio info nell’header;
 // •	Inserire il messaggio “Sta scrivendo” e poi cancellarlo all’arrivo del messaggio
 
+// aggiungiamo la gestione di Templating tramite Hamdlebars al nostro BoolzApp
+// DESCRIZIONE:
+// inserimento msg nostro;
+// msg di risposta automatica;
+// entrambi usando un template unico e quindi gestendo la classe (o come avete strutturato) sempre in maniera dinamica.
+
 
 
 $(document).ready(function(){
@@ -28,6 +34,10 @@ $(document).ready(function(){
   var cercaContatti = $('.cerca-contatti');
   // creo variabile nome singola chat
   var nomeChat = $('.chat-nome h3');
+
+  // inizializzo template handlebars
+  var source = $('#msg-template').html();
+  var template = Handlebars.compile(source);
 
   // creo variabile per generare l'ora e se ora e minuti hanno una sola cifra aggiungo "0"
   var date = new Date();
@@ -93,9 +103,18 @@ $(document).ready(function(){
     // creo variabile per salvare il mex inserito
     var mex = inputMex.val();
 
+    // handlebars scrittura mex
+    var mexInviato = {"mess": mex, "classMex": "inviati", "orario": date};;
+    var htmlInviato = template(mexInviato);
+
+
     // se non è vuoto e se non ha uno spazio aggiungo il mex più ora
     if (mex != "" && mex != " ") {
-      $('.chat-des.active').append('<div class="mex inviati clearfix"><p class="mex-testo">' + mex + '</p><span><i class="fa fa-chevron-down"></i></span><span class="mex-ora">' + date + '</span><div class="infomsg"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li><li class="exit">Exit</li></ul></div></div>');
+      // senza template handlebars
+      // $('.chat-des.active').append('<div class="mex inviati clearfix"><p class="mex-testo">' + mex + '</p><span><i class="fa fa-chevron-down"></i></span><span class="mex-ora">' + date + '</span><div class="infomsg"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li><li class="exit">Exit</li></ul></div></div>');
+
+      // se rispetta l'if "appendo" il mex che scrivo grazie a handlebars
+      $('.chat-des.active').append(htmlInviato);
 
       // azzero input
       inputMex.val("");
@@ -134,8 +153,16 @@ $(document).ready(function(){
     // la finestra chat ricorda attiva altrimenti mex sono in ogni chat
     var chatUtenteActive = $('.chat-des.active');
 
+    // handlebars scrittura mex
+    var mexRicevuto = {"mess": "Ok!", "classMex": "ricevuti", "orario": date};
+    var htmlRicevuto = template(mexRicevuto);
+
+    // senza template handlebars
     // aggiungo mex amico "ok"
-    chatUtenteActive.append('<div class="mex ricevuti clearfix"><p class="mex-testo">0K!</p><i class="fa fa-chevron-down"></i><span class="mex-ora">' + date + '</span><div class="infomsg"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li><li class="exit">Exit</li></ul></div></div>');
+    // chatUtenteActive.append('<div class="mex ricevuti clearfix"><p class="mex-testo">0K!</p><i class="fa fa-chevron-down"></i><span class="mex-ora">' + date + '</span><div class="infomsg"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li><li class="exit">Exit</li></ul></div></div>');
+
+    // "appendo" il mex di risposta "Ok!" grazie a handlebars
+    chatUtenteActive.append(htmlRicevuto);
 
     // dopo la risposta mi dice ultimo accesso
     $('.header-des-nome p').html("Ultimo accesso oggi alle " + date);

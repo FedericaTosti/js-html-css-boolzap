@@ -459,7 +459,24 @@
       </div>
     </div>
 
+    <!-- template handlebars js -->
+    <script id="msg-template" type="text/x-handlebars-template">
+      <div class="mex clearfix {{classMex}}">
+        <p class="mex-testo">{{mess}}</p>
+        <i class="fa fa-chevron-down"></i>
+        <span class="mex-ora">{{orario}}</span>
+        <div class="infomsg">
+          <ul>
+            <li>Info messaggio</li>
+            <li class="delete">Cancella messaggio</li>
+            <li class="exit">Exit</li>
+          </ul>
+        </div>
+      </div>
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 
     <script src="main.js"> </script>
   </body>
